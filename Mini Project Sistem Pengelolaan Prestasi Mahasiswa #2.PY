@@ -11,7 +11,7 @@ users = {
 }
 
 print("+","-"*68,"+")
-print("|        Selamat Datang di Sistem Pengelolaan Prestasi Mahasiswa       |")
+print("|        Selamat Datang di Sistem Manajemen Prestasi Mahasiswa         |")
 print("|                           Halaman Login                              |")
 print("+","-"*68,"+")
 
@@ -141,7 +141,7 @@ while True:
             hapus_prestasi()
         elif pilihan == "5":
             print("+","-"*68,"+")
-            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("| Terima kasih telah menggunakan Sistem Manajemen Prestasi Mahasiswa |")
             print("+","-"*68,"+")
             break
         else:
@@ -165,11 +165,12 @@ while True:
             lihat_prestasi()
         elif pilihan == "3":
             print("+","-"*68,"+")
-            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("| Terima kasih telah menggunakan Sistem Manajemen Prestasi Mahasiswa |")
             print("+","-"*68,"+")
             break
         else:
             print("+","-"*68,"+")
             print("|                    Menu tidak tersedia, coba lagi.                   |")
             print("+","-"*68,"+")
+
 
