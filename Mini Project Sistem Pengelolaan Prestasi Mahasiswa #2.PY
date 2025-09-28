@@ -6,7 +6,7 @@
 data = []
 
 users = {
-    "Admin": "Admin",
+    "Admin": "Admin@123",
     "Mahasiswa": "Mahasiswa@123"
 }
 
@@ -172,3 +172,4 @@ while True:
             print("+","-"*68,"+")
             print("|                    Menu tidak tersedia, coba lagi.                   |")
             print("+","-"*68,"+")
+
