@@ -223,6 +223,92 @@ program otomatis berhenti.
 ### Kondisi Admin dan Mahasiswa
 #### 1. Admin
 Admin memiliki hak penuh untuk melakukan CRUD (Create, Read, Update, Delete)
+
+<img width="656" height="198" alt="image" src="https://github.com/user-attachments/assets/5aded49e-640f-4014-a7ce-42cdfcc98886" />
+
+#### -- Tambahkan Prestasi --
+<img width="652" height="212" alt="image" src="https://github.com/user-attachments/assets/0b399870-7984-4c0b-9394-f0615b73c883" />
+
+- Fungsi: Menambahkan data prestasi baru ke dalam list data.
+
+Program akan meminta pengguna mengisi
+  1. Nama mahasiswa
+  2. Nama lomba
+  3. Juara keberapa
+  4. Tahun lomba
+  5. Tingkat lomba
+  
+- Setelah diisi, data disimpan dan muncul pesan konfirmasi.
+
+<img width="683" height="247" alt="image" src="https://github.com/user-attachments/assets/8785d275-4852-4a52-8b1f-6e76b5f1bbbd" />
+
+Output ini menunjukkan bahwa data prestasi baru berhasil disimpan. Program tidak langsung berhenti, tapi kembali ke menu utama.
+
+#### -- Lihat Prestasi --
+<img width="658" height="202" alt="image" src="https://github.com/user-attachments/assets/752a12fc-9206-4d08-b170-3050f8309ed3" />
+
+Tujuan: Menampilkan semua data prestasi yang sudah tersimpan.
+
+Pada Kondisi ini Memungkinkan Akan Ada Dua Output yang Berbeda
+
+- JIka `data` Masing Kosong :
+<img width="656" height="107" alt="image" src="https://github.com/user-attachments/assets/980c5a57-0396-44e1-a55a-5202ec581c9e" />
+
+Program mengecek if data == [], karena kosong, ditampilkan pesan bahwa belum ada data prestasi.
+
+- Jika `data` Sudah Diisi Setelah Menambahkan : 
+<img width="745" height="122" alt="image" src="https://github.com/user-attachments/assets/39b4411d-cbee-4034-b045-7887e06d890b" />
+
+Program melakukan looping while n < len(data) untuk menampilkan seluruh data prestasi yang sudah ditambahkan lengkap dengan urutan nomornya.
+
+#### -- Update Prestasi --
+<img width="652" height="211" alt="image" src="https://github.com/user-attachments/assets/60f7d33f-e54a-414b-9bea-3e481b6f2e8f" />
+
+Tujuan: Mengupdate data prestasi yang ingin diubah apabila ingin memperbarui atau terjadi kesalahan
+
+Pada Kondisi Akan Ada Tiga Output yang Berbeda
+
+- JIka `data` Masing Kosong :
+<img width="656" height="107" alt="image" src="https://github.com/user-attachments/assets/980c5a57-0396-44e1-a55a-5202ec581c9e" />
+
+Program mengecek if data == [], karena kosong, ditampilkan pesan bahwa belum ada data prestasi.
+- Jika `data` Sudah Diisi lalu Update :
+<img width="661" height="321" alt="image" src="https://github.com/user-attachments/assets/57e3399d-026a-4888-81a9-4159a5c27155" />
+<img width="673" height="138" alt="image" src="https://github.com/user-attachments/assets/39da85c7-660c-46ab-b435-47a245046979" />
+
+- Jika Tidak Memilih Yang Tersedia (Value Error, KeyboardInterrupt, EOFError, IndexError):
+<img width="666" height="175" alt="image" src="https://github.com/user-attachments/assets/a0df32ba-eddb-418e-b13f-bd7036fb517f" />
+
+Program menampilkan pesan error karena memilih yang tidak tersedia seperti CTRL+C, CTRL+Z, Enter, dan lain lain.
+
+#### -- Delete Prestasi --
+<img width="660" height="205" alt="image" src="https://github.com/user-attachments/assets/945c0fce-79e1-4fb7-ad16-fec349bc49fe" />
+
+Tujuan: Menghapus data prestasi apabila sudah tidak diperlukan semuanya atau ingin menghapus salah satunya
+
+Pada Kondisi Akan Ada 4 Output yang Berbeda
+
+- JIka `data` Masing Kosong :
+<img width="656" height="107" alt="image" src="https://github.com/user-attachments/assets/980c5a57-0396-44e1-a55a-5202ec581c9e" />
+
+- Jika Memilih Menghapus Semua `data` (y):
+<img width="660" height="572" alt="image" src="https://github.com/user-attachments/assets/c2f76d43-10fb-4789-a131-ed25b4f18642" />
+Program menghapus semua data prestasi mahasiswa yang telah ditambahkan menggunakan data.clear()
+
+- Jika Memilih Menghapus Salah Satu `data` (g):
+<img width="671" height="609" alt="image" src="https://github.com/user-attachments/assets/ce8e214b-a6bd-4ead-bc48-c6cc2706a219" />
+Program menghapus data yang telah dipilih
+
+- Jika Tidak Memilih Yang Tersedia (Value Error, KeyboardInterrupt, EOFError, IndexError):
+<img width="665" height="187" alt="image" src="https://github.com/user-attachments/assets/4cc99201-9719-4084-9d46-6bde10f13abb" />
+<img width="655" height="202" alt="image" src="https://github.com/user-attachments/assets/edde097e-1306-4432-b8b2-60996a2776fd" />
+Program menampilkan pesan error karena memilih yang tidak tersedia seperti CTRL+C, CTRL+Z, Enter, dan lain lain.
+
+#### 2. Mahasiswa
+Mahasiswa hanya bisa Create dan Read
+
+<img width="655" height="158" alt="image" src="https://github.com/user-attachments/assets/b4489c7d-33c0-4461-a5f6-a7f8f8935457" />
+
 #### -- Tambahkan Prestasi --
 <img width="652" height="212" alt="image" src="https://github.com/user-attachments/assets/0b399870-7984-4c0b-9394-f0615b73c883" />
 
@@ -258,7 +344,4 @@ Program mengecek if data == [], karena kosong, ditampilkan pesan bahwa belum ada
 
 Program melakukan looping while n < len(data) untuk menampilkan seluruh data prestasi yang sudah ditambahkan lengkap dengan urutan nomornya.
 
-#### --
 
-#### 2. Mahasiswa
-Mahasiswa hanya bisa Create dan Read
