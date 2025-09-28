@@ -23,10 +23,10 @@ Data prestasi mahasiswa yang bisa disimpan meliputi:
 4. Tahun lomba
 5. Tingkat lomba (Kabupaten/Provinsi/Nasional/Internasional)
 
-## Flowchart Sistem Pengelolaan Prestasi Mahasiswa
+## Flowchart Sistem Manajemen Prestasi Mahasiswa
 <img width="1999" height="2503" alt="MINPRO 2 drawio (3)" src="https://github.com/user-attachments/assets/72792a2b-0c7b-461d-b643-3e0875e6ecce" />
 
-## Program Sistem Pengelolaan Prestasi Mahasiswa
+## Program Sistem Manajemen Prestasi Mahasiswa
 
 ```python
 # NAMA    : AWANG RIFKY MUHADZIB
@@ -42,7 +42,7 @@ users = {
 }
 
 print("+","-"*68,"+")
-print("|        Selamat Datang di Sistem Pengelolaan Prestasi Mahasiswa       |")
+print("|        Selamat Datang di Sistem Manajemen Prestasi Mahasiswa         |")
 print("|                           Halaman Login                              |")
 print("+","-"*68,"+")
 
@@ -151,7 +151,7 @@ pengguna = login()
 while True:
     if pengguna == "Admin":
         print("\n\n+","-"*68,"+")
-        print("|                        Menu Prestasi Mahasiswa |                     |") 
+        print("|                        Menu Prestasi Mahasiswa !                     |") 
         print("+","-"*68,"+")
         print("1. Tambahkan Prestasi Mahasiswa")
         print("2. Lihat Prestasi Mahasiswa")
@@ -171,7 +171,7 @@ while True:
             hapus_prestasi()
         elif pilihan == "5":
             print("+","-"*68,"+")
-            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("| Terima kasih telah menggunakan Sistem Manajemen Prestasi Mahasiswa |")
             print("+","-"*68,"+")
             break
         else:
@@ -195,28 +195,30 @@ while True:
             lihat_prestasi()
         elif pilihan == "3":
             print("+","-"*68,"+")
-            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("| Terima kasih telah menggunakan Sistem Manajemen Prestasi Mahasiswa |")
             print("+","-"*68,"+")
             break
         else:
             print("+","-"*68,"+")
             print("|                    Menu tidak tersedia, coba lagi.                   |")
             print("+","-"*68,"+")
+
 ```
 ## Kondisi
 ### Kondisi Login
 #### 1. Jika username dan password benar
-<img width="653" height="200" alt="image" src="https://github.com/user-attachments/assets/68926022-9828-4fc1-b10f-487bf35d5806" />
+<img width="657" height="197" alt="image" src="https://github.com/user-attachments/assets/e3b1c530-bc62-4fc9-941d-9cdd0b822a88" />
 
 masuk ke menu sesuai role.
 
 #### 3. Jika username dan password salah
-<img width="661" height="155" alt="image" src="https://github.com/user-attachments/assets/492eb507-eab4-43bf-b5cd-5249445b0180" />
+<img width="658" height="157" alt="image" src="https://github.com/user-attachments/assets/9a1f25fa-74a6-4dd0-bdf5-016387460b42" />
 
 mendapat pesan error dan berkurang 3 kali kesempatan login.
 
 #### 4. Jika salah sampai 3 kali
-<img width="652" height="347" alt="image" src="https://github.com/user-attachments/assets/2bf4cbf4-c4c9-47e9-bd63-54032d1b721d" />
+<img width="660" height="352" alt="image" src="https://github.com/user-attachments/assets/b928b45f-d083-4f68-af59-51a2ef538b33" />
+
 
 program otomatis berhenti.
 
@@ -293,16 +295,30 @@ Pada Kondisi Akan Ada 4 Output yang Berbeda
 
 - Jika Memilih Menghapus Semua `data` (y):
 <img width="660" height="572" alt="image" src="https://github.com/user-attachments/assets/c2f76d43-10fb-4789-a131-ed25b4f18642" />
+
 Program menghapus semua data prestasi mahasiswa yang telah ditambahkan menggunakan data.clear()
 
 - Jika Memilih Menghapus Salah Satu `data` (g):
 <img width="671" height="609" alt="image" src="https://github.com/user-attachments/assets/ce8e214b-a6bd-4ead-bc48-c6cc2706a219" />
+
 Program menghapus data yang telah dipilih
 
 - Jika Tidak Memilih Yang Tersedia (Value Error, KeyboardInterrupt, EOFError, IndexError):
 <img width="665" height="187" alt="image" src="https://github.com/user-attachments/assets/4cc99201-9719-4084-9d46-6bde10f13abb" />
+
 <img width="655" height="202" alt="image" src="https://github.com/user-attachments/assets/edde097e-1306-4432-b8b2-60996a2776fd" />
+
 Program menampilkan pesan error karena memilih yang tidak tersedia seperti CTRL+C, CTRL+Z, Enter, dan lain lain.
+
+#### -- Keluar --
+
+<img width="675" height="206" alt="image" src="https://github.com/user-attachments/assets/03dfbc95-21f6-4964-b838-99db7fee732a" />
+
+Tujuan: Mengakhiri program.
+
+<img width="660" height="267" alt="image" src="https://github.com/user-attachments/assets/e616a673-4360-461d-837b-e087ee681c67" />
+
+Setelah menampilkan pesan "Terimakasih Telah Menggunakan Sistem Manajemen Prestasi Mahasiswa ", program langsung menghentikan perulangan dengan break, sehingga program selesai berjalan.
 
 #### 2. Mahasiswa
 Mahasiswa hanya bisa Create dan Read
@@ -310,7 +326,7 @@ Mahasiswa hanya bisa Create dan Read
 <img width="655" height="158" alt="image" src="https://github.com/user-attachments/assets/b4489c7d-33c0-4461-a5f6-a7f8f8935457" />
 
 #### -- Tambahkan Prestasi --
-<img width="652" height="212" alt="image" src="https://github.com/user-attachments/assets/0b399870-7984-4c0b-9394-f0615b73c883" />
+<img width="655" height="160" alt="image" src="https://github.com/user-attachments/assets/2f7084ad-e156-4cf4-b37c-f1d35f962892" />
 
 - Fungsi: Menambahkan data prestasi baru ke dalam list data.
 
@@ -328,7 +344,7 @@ Program akan meminta pengguna mengisi
 Output ini menunjukkan bahwa data prestasi baru berhasil disimpan. Program tidak langsung berhenti, tapi kembali ke menu utama.
 
 #### -- Lihat Prestasi --
-<img width="745" height="122" alt="image" src="https://github.com/user-attachments/assets/d65e5705-a5d7-45f7-bb9a-a778535efc3f" />
+<img width="652" height="162" alt="image" src="https://github.com/user-attachments/assets/49d8a3cf-2b9d-4aeb-a232-c67170348a18" />
 
 Tujuan: Menampilkan semua data prestasi yang sudah tersimpan.
 
@@ -343,5 +359,14 @@ Program mengecek if data == [], karena kosong, ditampilkan pesan bahwa belum ada
 <img width="745" height="122" alt="image" src="https://github.com/user-attachments/assets/39b4411d-cbee-4034-b045-7887e06d890b" />
 
 Program melakukan looping while n < len(data) untuk menampilkan seluruh data prestasi yang sudah ditambahkan lengkap dengan urutan nomornya.
+
+#### -- Keluar --
+<img width="657" height="151" alt="image" src="https://github.com/user-attachments/assets/bed4574b-264e-4ce1-a2f9-0eead2deb841" />
+
+Tujuan: Mengakhiri program.
+
+<img width="656" height="222" alt="image" src="https://github.com/user-attachments/assets/fbd669f5-3226-4b23-8462-896d1a960fc0" />
+
+Setelah menampilkan pesan "Terimakasih Telah Menggunakan Sistem Manajemen Prestasi Mahasiswa ", program langsung menghentikan perulangan dengan break, sehingga program selesai berjalan.
 
 
