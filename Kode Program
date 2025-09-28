@@ -1,0 +1,174 @@
+# NAMA    : AWANG RIFKY MUHADZIB
+# KELAS   : B
+# NIM     : 2509116059
+# - MINI PROJECT 2 DASAR DASAR PEMROGRAMAN -
+
+data = []
+
+users = {
+    "Admin": "Admin",
+    "Mahasiswa": "Mahasiswa@123"
+}
+
+print("+","-"*68,"+")
+print("|        Selamat Datang di Sistem Pengelolaan Prestasi Mahasiswa       |")
+print("|                           Halaman Login                              |")
+print("+","-"*68,"+")
+
+def login():
+    kesempatan = 3
+    while kesempatan > 0:
+        username = input("--> Username: ")
+        password = input("--> Password: ")
+
+        if username in users and users[username] == password:
+            print("+","-"*68,"+")
+            print("|                          Login berhasil !                            |")
+            print("+","-"*68,"+")
+            return username
+        else:
+            kesempatan -= 1
+            print(f"Login gagal. Sisa kesempatan: {kesempatan}")
+
+    print("+","-"*68,"+")
+    print("|              Login gagal setelah 3 kali. Keluar program.             |")
+    print("+","-"*68,"+")
+    exit()
+
+def tambah_prestasi():
+    print("\n+","-"*68,"+")
+    print("|                    Tambahkan Prestasi Mahasiswa !                    |")
+    print("+","-"*68,"+")
+    nama = input("Nama Mahasiswa : ")
+    lomba = input("Nama Lomba : ")
+    juara = input("Juara Berapa (1/2/3) : ")
+    tahun = input("Tahun Lomba : ")
+    tingkat = input("Tingkat (Kabupaten/Provinsi/Nasional/Internasional) : ")
+
+    # Simpan sebagai list biar bisa diakses pakai indeks [0] dst
+    data.append([nama, lomba, juara, tahun, tingkat])
+    print("+","-"*68,"+")
+    print(f"|            Prestasi atas nama {nama} berhasil ditambahkan!           |")
+    print("+","-"*68,"+")
+
+def lihat_prestasi():
+    print("\n+","-"*68,"+")
+    print("|                      Daftar Prestasi Mahasiswa                       |")
+    print("+","-"*68,"+")
+    if data == []:
+        print("|                 Belum ada prestasi yang ditambahkan !                |")
+        print("+","-"*68,"+")
+    else:
+        n = 0
+        while n < len(data):
+            a = data[n]
+            print(f"{n+1}. {a[0]} - {a[1]} - Juara {a[2]} - Tahun {a[3]} - Tingkat {a[4]}")
+            n = n + 1
+
+def update_prestasi():
+    lihat_prestasi()
+    if data == []:
+        return
+
+    try:
+        index = int(input("Pilih nomor untuk update: "))
+        nama = input("Nama Mahasiswa baru: ")
+        lomba = input("Nama Lomba baru: ")
+        juara = input("Juara baru (1/2/3): ")
+        tahun = input("Tahun Lomba baru: ")
+        tingkat = input("Tingkat baru (Kabupaten/Provinsi/Nasional/Internasional): ")
+
+        data[index - 1] = [nama, lomba, juara, tahun, tingkat]
+        print("+","-"*68,"+")
+        print("|                      Data berhasil diupdate !                        |")
+        print("+","-"*68,"+")
+    except (ValueError, IndexError, EOFError, KeyboardInterrupt):
+        print("+","-"*68,"+")
+        print("|                        ERROR, Ulangi Lagi !                          |")
+        print("+","-"*68,"+")
+
+def hapus_prestasi():
+    lihat_prestasi()
+    if data == []:
+        return
+
+    pilihan = input("Hapus semua (y) atau pilih nomor (g): ").strip().lower()
+
+    if pilihan == 'y':
+        data.clear()
+        print("+","-"*68,"+")
+        print("|                   Semua data berhasil dihapus!                       |")
+        print("+","-"*68,"+")
+    elif pilihan == "g" :
+        try:
+            indeks = int(input("--> Pilih nomor untuk hapus : "))
+            nama = data[indeks - 1][0]
+            del data[indeks - 1]
+            print("+","-"*68,"+")
+            print(f"|                Prestasi {nama} berhasil dihapus!                     |")
+            print("+","-"*68,"+")
+        except (ValueError, IndexError, EOFError, KeyboardInterrupt):
+            print("+","-"*68,"+")
+            print("|                        ERROR, Ulangi Lagi !                          |")
+            print("+","-"*68,"+")
+    else:
+        print("+","-"*68,"+")
+        print("|                       ERROR, Pilih (y)/(g) !                         |")
+        print("+","-"*68,"+")
+
+pengguna = login()
+
+while True:
+    if pengguna == "Admin":
+        print("\n\n+","-"*68,"+")
+        print("|                        Menu Prestasi Mahasiswa |                     |") 
+        print("+","-"*68,"+")
+        print("1. Tambahkan Prestasi Mahasiswa")
+        print("2. Lihat Prestasi Mahasiswa")
+        print("3. Update Prestasi Mahasiswa")
+        print("4. Hapus Prestasi Mahasiswa")
+        print("5. Keluar")
+
+        pilihan = input("--> Pilih menu (1-5) : ")
+
+        if pilihan == "1":
+            tambah_prestasi()
+        elif pilihan == "2":
+            lihat_prestasi()
+        elif pilihan == "3":
+            update_prestasi()
+        elif pilihan == "4":
+            hapus_prestasi()
+        elif pilihan == "5":
+            print("+","-"*68,"+")
+            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("+","-"*68,"+")
+            break
+        else:
+            print("+","-"*68,"+")
+            print("|                    Menu tidak tersedia, coba lagi.                   |")
+            print("+","-"*68,"+")
+
+    elif pengguna == "Mahasiswa":
+        print("\n\n+","-"*68,"+")
+        print("|                        Menu Prestasi Mahasiswa |                     |") 
+        print("+","-"*68,"+")
+        print("1. Tambahkan Prestasi Mahasiswa")
+        print("2. Lihat Prestasi Mahasiswa")
+        print("3. Keluar")
+
+        pilihan = input("--> Pilih menu (1-3) : ")
+
+        if pilihan == "1":
+            tambah_prestasi()
+        elif pilihan == "2":
+            lihat_prestasi()
+        elif pilihan == "3":
+            print("+","-"*68,"+")
+            print("| Terima kasih telah menggunakan Sistem Pengelolaan Prestasi Mahasiswa |")
+            print("+","-"*68,"+")
+            break
+        else:
+            print("+","-"*68,"+")
+            print("|                    Menu tidak tersedia, coba lagi.                   |")
+            print("+","-"*68,"+")
