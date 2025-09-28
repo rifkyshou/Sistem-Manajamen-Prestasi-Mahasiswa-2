@@ -223,19 +223,42 @@ program otomatis berhenti.
 ### Kondisi Admin dan Mahasiswa
 #### 1. Admin
 Admin memiliki hak penuh untuk melakukan CRUD (Create, Read, Update, Delete)
-##### - Tambahkan Prestasi
+#### -- Tambahkan Prestasi --
 <img width="652" height="212" alt="image" src="https://github.com/user-attachments/assets/0b399870-7984-4c0b-9394-f0615b73c883" />
+
 - Fungsi: Menambahkan data prestasi baru ke dalam list data.
 
 Program akan meminta pengguna mengisi
-  1.Nama mahasiswa
-  2.Nama lomba
-  3.Juara keberapa
-  4.Tahun lomba
-  5.Tingkat lomba
+  1. Nama mahasiswa
+  2. Nama lomba
+  3. Juara keberapa
+  4. Tahun lomba
+  5. Tingkat lomba
   
 - Setelah diisi, data disimpan dan muncul pesan konfirmasi.
+
 <img width="683" height="247" alt="image" src="https://github.com/user-attachments/assets/8785d275-4852-4a52-8b1f-6e76b5f1bbbd" />
+
+Output ini menunjukkan bahwa data prestasi baru berhasil disimpan. Program tidak langsung berhenti, tapi kembali ke menu utama.
+
+#### -- Lihat Prestasi --
+<img width="745" height="122" alt="image" src="https://github.com/user-attachments/assets/d65e5705-a5d7-45f7-bb9a-a778535efc3f" />
+
+Tujuan: Menampilkan semua data prestasi yang sudah tersimpan.
+
+Pada Kondisi ini Memungkinkan Akan Ada Dua Output yang Berbeda
+
+- JIka `data` Masing Kosong :
+<img width="656" height="107" alt="image" src="https://github.com/user-attachments/assets/980c5a57-0396-44e1-a55a-5202ec581c9e" />
+
+Program mengecek if data == [], karena kosong, ditampilkan pesan bahwa belum ada data prestasi.
+
+- Jika `data` Sudah Diisi Setelah Menambahkan : 
+<img width="745" height="122" alt="image" src="https://github.com/user-attachments/assets/39b4411d-cbee-4034-b045-7887e06d890b" />
+
+Program melakukan looping while n < len(data) untuk menampilkan seluruh data prestasi yang sudah ditambahkan lengkap dengan urutan nomornya.
+
+#### --
 
 #### 2. Mahasiswa
 Mahasiswa hanya bisa Create dan Read
